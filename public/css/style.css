@@ -3018,6 +3018,11 @@ body {
   background-color: rgb(55 67 87 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:text-pw10) {
+  --tw-text-opacity: 1;
+  color: rgb(224 224 224 / var(--tw-text-opacity));
+}
+
 :is(.dark .dark\:text-pw2) {
   --tw-text-opacity: 1;
   color: rgb(77 100 141 / var(--tw-text-opacity));
@@ -3033,28 +3038,23 @@ body {
   color: rgb(206 232 255 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:text-pw9) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 :is(.dark .dark\:text-pw7) {
   --tw-text-opacity: 1;
   color: rgb(31 43 62 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:text-pw10) {
+:is(.dark .dark\:text-pw9) {
   --tw-text-opacity: 1;
-  color: rgb(224 224 224 / var(--tw-text-opacity));
-}
-
-:is(.dark .dark\:shadow-pw5) {
-  --tw-shadow-color: #cee8ff;
-  --tw-shadow: var(--tw-shadow-colored);
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:shadow-pw2) {
   --tw-shadow-color: #4d648d;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+:is(.dark .dark\:shadow-pw5) {
+  --tw-shadow-color: #cee8ff;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
