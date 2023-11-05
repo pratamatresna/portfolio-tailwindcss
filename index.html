@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <!-- ************************************************************ -->
@@ -22,7 +33,9 @@
         <div class="flex items-center justify-between relative">
           <!-- Element kiri -->
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-pw2 block py-6"
+            <a
+              href="#home"
+              class="font-bold text-lg text-pw2 dark:text-pw5 block py-6"
               >ZyrantTech</a
             >
           </div>
@@ -47,50 +60,70 @@
             </button>
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-pw9 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              class="hidden absolute py-5 bg-pw9 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-pw6 dark:shadow-pw5 lg:dark:bg-transparent"
             >
               <ul class="block lg:flex">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3"
+                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3 dark:text-pw9"
                     >Beranda</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3"
+                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3 dark:text-pw9"
                     >About</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portfolio"
-                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3"
+                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3 dark:text-pw9"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#clients"
-                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3"
+                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3 dark:text-pw9"
                     >Clients</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#blog"
-                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3"
+                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3 dark:text-pw9"
                     >Blogs</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3"
+                    class="text-base flex text-pw7 py-2 mx-8 group-hover:text-pw3 dark:text-pw9"
                     >Contact</a
                   >
+                </li>
+                <li class="flex items-center pl-8 mt-3 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-pw1 dark:text-pw5"
+                      >light</span
+                    >
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-pw8 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-pw9 transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-pw1 dark:text-pw5"
+                      >dark</span
+                    >
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -101,22 +134,25 @@
     <!-- Header End -->
     <!-- ************************************************************ -->
     <!-- Hero Section Start  -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-pw6">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-pw2 md:text-xl">
+            <h1
+              class="text-base font-semibold text-pw2 md:text-xl dark:text-pw5"
+            >
               Hallo Semua 🖐️, Saya
-              <span class="block font-bold text-4xl text-pw7 mt-1 lg:text-5xl"
+              <span
+                class="block font-bold text-4xl text-pw7 mt-1 lg:text-5xl dark:text-pw9"
                 >Muhammad Agung Pratama Tresna</span
               >
             </h1>
-            <h2 class="font-medium text-pw3 text-lg mb-5 lg:text-2xl">
-              Web Developer & Model Developer
+            <h2 class="font-medium text-pw3 text-lg mb-5 lg:text-2x">
+              Web Developer & <span class="dark:text-pw9">Model Developer</span>
             </h2>
-            <p class="font-medium mb-10 text-pw4 leading-relaxed">
+            <p class="font-medium mb-10 text-pw4 leading-relaxed dark:text-pw3">
               Belajar Web Programming itu mudah dan menyenangkan bukan.
-              <span class="text-pw7 font-bold">Bukan!</span>
+              <span class="text-pw7 font-bold dark:text-pw9">Bukan!</span>
             </p>
             <a
               href="#"
@@ -139,18 +175,22 @@
     <!-- Hero Section End -->
     <!-- ************************************************************ -->
     <!-- About Section Start -->
-    <section id="about" class="pt-30 pb-32 lg:pt-36">
+    <section id="about" class="pt-30 pb-32 lg:pt-36 dark:bg-pw6">
       <div class="container">
         <div class="flex flex-wrap">
           <!-- Bagian 1 -->
           <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase text-pw2 text-lg mb-3">
+            <h4 class="font-bold uppercase text-pw2 text-lg mb-3 dark:text-pw5">
               Tentang Saya
             </h4>
-            <h2 class="font-bold text-pw7 text-3xl mb-5 max-w-md lg:text-4xl">
+            <h2
+              class="font-bold text-pw7 text-3xl mb-5 max-w-md lg:text-4xl dark:text-pw9"
+            >
               Ayo! Belajar Bersama Zyrant Tech!
             </h2>
-            <p class="font-medium text-base text-pw4 max-w-xl lg:text-lg">
+            <p
+              class="font-medium text-base text-pw4 max-w-xl lg:text-lg dark:text-pw2"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
               laborum pariatur dolore voluptate cumque veniam rem!
             </p>
@@ -158,11 +198,13 @@
           <!-- Bagian 2 -->
           <div class="w-full px-4 lg:w-1/2">
             <h3
-              class="font-semibold text-pw7 text-2xl mb-4 lg:text-3xl lg:pt-10"
+              class="font-semibold text-pw7 text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-pw9"
             >
               Social Media
             </h3>
-            <p class="font-medium text-base text-pw4 mb-6 lg:text-lg">
+            <p
+              class="font-medium text-base text-pw4 mb-6 lg:text-lg dark:text-pw2"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
               nihil unde culpa voluptatibus voluptate sint earum minus
               consequatur!
@@ -252,20 +294,22 @@
     <!-- About Section End -->
     <!-- ************************************************************ -->
     <!-- Portfolio Start -->
-    <section id="portfolio" class="pt-36 pb-16 bg-pw5">
+    <section id="portfolio" class="pt-36 pb-16 bg-pw5 dark:bg-pw4">
       <!-- pembungkus portfolio -->
       <div class="container">
         <!-- pembungkus judul portfolio -->
         <div class="w-full px-4">
           <!-- portfolio pengantar -->
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-pw2 mb-2">Portfolio</h4>
+            <h4 class="font-semibold text-lg text-pw2 mb-2 dark:text-pw5">
+              Portfolio
+            </h4>
             <h2
-              class="font-bold text-pw7 text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-pw7 text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-pw9"
             >
               Project Terbaru
             </h2>
-            <p class="font-medium text-pw1 md:text-lg">
+            <p class="font-medium text-pw1 md:text-lg dark:text-pw7">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae placeat deleniti laborum obcaecati. Quae praesentium
               aperiam omnis quod deleniti quis!
@@ -285,10 +329,10 @@
                 width="w-full"
               />
             </div>
-            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3">
+            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
               Landing Page Pratama
             </h3>
-            <p class="font-medium text-base text-pw1">
+            <p class="font-medium text-base text-pw1 dark:text-pw7">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Consequuntur placeat harum vitae?
             </p>
@@ -302,10 +346,10 @@
                 width="w-full"
               />
             </div>
-            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3">
+            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
               E-commerce Pratama
             </h3>
-            <p class="font-medium text-base text-pw1">
+            <p class="font-medium text-base text-pw1 dark:text-pw7">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Consequuntur placeat harum vitae?
             </p>
@@ -319,10 +363,10 @@
                 width="w-full"
               />
             </div>
-            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3">
+            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
               Technical Documentation
             </h3>
-            <p class="font-medium text-base text-pw1">
+            <p class="font-medium text-base text-pw1 dark:text-pw7">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Consequuntur placeat harum vitae?
             </p>
@@ -336,10 +380,10 @@
                 width="w-full"
               />
             </div>
-            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3">
+            <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
               Tribute Page Pratama
             </h3>
-            <p class="font-medium text-base text-pw1">
+            <p class="font-medium text-base text-pw1 dark:text-pw7">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Consequuntur placeat harum vitae?
             </p>
@@ -350,7 +394,7 @@
     <!-- Portfolio End -->
     <!-- ************************************************************ -->
     <!-- CLient Section Start -->
-    <section id="clients" class="pt-36 pb-32 bg-pw2">
+    <section id="clients" class="pt-36 pb-32 bg-pw2 dark:bg-pw7">
       <div class="container">
         <!-- pembungkus judul pengantar client -->
         <div class="w-full px-4">
@@ -407,19 +451,21 @@
     <!-- CLient Section End -->
     <!-- ************************************************************ -->
     <!-- blog Section Start -->
-    <section id="blog" class="pt-36 pb-32 bg-pw10">
+    <section id="blog" class="pt-36 pb-32 bg-pw10 dark:bg-pw6">
       <div class="container">
         <!-- pembungkus pengantar blog -->
         <div class="w-full px-4">
           <!-- pengantar blog -->
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-pw2 mb-2">Blog</h4>
+            <h4 class="font-semibold text-lg text-pw2 mb-2 dark:text-pw5">
+              Blog
+            </h4>
             <h2
-              class="font-bold text-pw7 text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-pw7 text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-pw9"
             >
               Tulisan Terkini
             </h2>
-            <p class="font-medium text-pw1 md:text-lg">
+            <p class="font-medium text-pw1 md:text-lg dark:text-pw10">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
               provident commodi molestias facere!
             </p>
@@ -427,7 +473,9 @@
           <div class="flex flex-wrap md:justify-center">
             <!-- pembungkus card blog programming -->
             <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-              <div class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10">
+              <div
+                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 dark:shadow-pw2"
+              >
                 <img
                   src="https://source.unsplash.com/360x200?programming"
                   alt="Programming"
@@ -437,11 +485,11 @@
                   <h3>
                     <a
                       href="#"
-                      class="block mb-3 font-semibold text-xl text-pw7 hover:text-pw3 truncate"
+                      class="block mb-3 font-semibold text-xl text-pw7 hover:text-pw3 truncate dark:text-pw9"
                       >Tips Belajar Programming</a
                     >
                   </h3>
-                  <p class="font-medium text-base text-pw1 mb-6">
+                  <p class="font-medium text-base text-pw1 mb-6 dark:text-pw10">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis, nisi.
                   </p>
@@ -456,7 +504,9 @@
             </div>
             <!-- pembungkus card blog mechanical+keyboard -->
             <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-              <div class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10">
+              <div
+                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              >
                 <img
                   src="https://source.unsplash.com/360x200?mechanical+keyboard "
                   alt="mechanical+keyboard "
@@ -466,11 +516,11 @@
                   <h3>
                     <a
                       href="#"
-                      class="block mb-3 font-semibold text-xl text-pw7 hover:text-pw3 truncate"
+                      class="block mb-3 font-semibold text-xl text-pw7 hover:text-pw3 truncate dark:text-pw9"
                       >Tips mechanical keyboard
                     </a>
                   </h3>
-                  <p class="font-medium text-base text-pw1 mb-6">
+                  <p class="font-medium text-base text-pw1 mb-6 dark:text-pw10">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Error rem delectus cum.
                   </p>
@@ -485,7 +535,9 @@
             </div>
             <!-- pembungkus card blog coffee -->
             <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-              <div class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10">
+              <div
+                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              >
                 <img
                   src="https://source.unsplash.com/360x200?coffee"
                   alt="coffee"
@@ -495,11 +547,11 @@
                   <h3>
                     <a
                       href="#"
-                      class="block mb-3 font-semibold text-xl text-pw7 hover:text-pw3 truncate"
+                      class="block mb-3 font-semibold text-xl text-pw7 hover:text-pw3 truncate dark:text-pw9"
                       >Menikmati Secangkir Kopi</a
                     >
                   </h3>
-                  <p class="font-medium text-base text-pw1 mb-6">
+                  <p class="font-medium text-base text-pw1 mb-6 dark:text-pw10">
                     Lorem ipsum dolor sit amet consectetur adipisicing.
                   </p>
                   <a
@@ -518,18 +570,20 @@
     <!-- blog Section End -->
     <!-- ************************************************************ -->
     <!-- contact Section Start -->
-    <section id="contact" class="pt36 pb-32">
+    <section id="contact" class="pt36 pb-32 dark:bg-pw8">
       <div class="container">
         <div class="w-full px-4">
           <!-- Pengantar Contact -->
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-pw2 mb-2">Contact</h4>
+            <h4 class="font-semibold text-lg text-pw2 mb-2 dark:text-pw5">
+              Contact
+            </h4>
             <h2
-              class="font-bold text-pw7 text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="font-bold text-pw7 text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-pw9"
             >
               Hubungi Kami
             </h2>
-            <p class="font-medium text-pw1 md:text-lg">
+            <p class="font-medium text-pw1 md:text-lg dark:text-pw3">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
             </p>
           </div>
@@ -539,7 +593,9 @@
           <div class="w-full lg:w-2/3 lg:mx-auto">
             <!-- Nama -->
             <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base font-bold text-pw2"
+              <label
+                for="name"
+                class="text-base font-bold text-pw2 dark:text-pw3"
                 >Nama</label
               >
               <input
@@ -550,7 +606,9 @@
             </div>
             <!-- Email -->
             <div class="w-full px-4 mb-8">
-              <label for="email" class="text-base font-bold text-pw2"
+              <label
+                for="email"
+                class="text-base font-bold text-pw2 dark:text-pw3"
                 >Email</label
               >
               <input
@@ -561,7 +619,9 @@
             </div>
             <!-- Pesan -->
             <div class="w-full px-4 mb-8">
-              <label for="pesan" class="text-base font-bold text-pw2"
+              <label
+                for="pesan"
+                class="text-base font-bold text-pw2 dark:text-pw3"
                 >Pesan</label
               >
               <textarea
@@ -572,7 +632,7 @@
             </div>
             <div class="w-full px-4">
               <button
-                class="text-base font-semibold text-pw9 bg-pw2 py-3 px-8 rounded-full w-full hover:bg-pw3 hover:text-pw7 transition duration-500 hover:shadow-lg"
+                class="text-base font-semibold text-pw9 bg-pw2 py-3 px-8 rounded-full w-full hover:bg-pw3 hover:text-pw7 transition duration-500 hover:shadow-lg dark:text-pw9 dark:hover:text-pw7"
               >
                 Kirim
               </button>

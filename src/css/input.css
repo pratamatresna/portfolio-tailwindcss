@@ -7,12 +7,12 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed z-[9999] bg-pw9 bg-opacity-70 backdrop-blur-sm;  
+  @apply fixed z-[9999] bg-pw9 bg-opacity-70 backdrop-blur-sm dark:bg-pw6 dark:bg-opacity-50;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-pw7;
+  @apply w-[30px] h-[2px] my-2 block bg-pw7 dark:bg-pw9;
 }
 /* mencari elemen child namanya span merupakan elemen ke 1 */
 .hamburger-active > span:nth-child(1) {
@@ -25,4 +25,8 @@ body {
 /* mencari elemen child namanya span merupakan elemen ke 3 */
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
+}
+/* toggle */
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
 }
