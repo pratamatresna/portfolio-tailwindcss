@@ -3058,6 +3058,11 @@ body {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+:is(.dark .dark\:hover\:text-pw3:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(172 194 239 / var(--tw-text-opacity));
+}
+
 :is(.dark .dark\:hover\:text-pw7:hover) {
   --tw-text-opacity: 1;
   color: rgb(31 43 62 / var(--tw-text-opacity));
@@ -3164,11 +3169,6 @@ body {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .lg\:text-5xl {
