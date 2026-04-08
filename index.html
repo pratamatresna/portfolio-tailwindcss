@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Pratama</title>
     <link href="dist/css/final.css" rel="stylesheet" />
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -132,7 +134,7 @@
     <section id="home" class="pt-36 dark:bg-pw6">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right">
             <h1
               class="text-base font-semibold text-pw2 md:text-xl dark:text-pw5"
             >
@@ -158,7 +160,7 @@
               >Contact Me</a
             >
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="w-full self-end px-4 lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
             <div class="mt-10 lg:mt-0 lg:right-0">
               <img
                 src="dist/img/Pratama1.png"
@@ -177,7 +179,7 @@
       <div class="container">
         <div class="flex flex-wrap">
           <!-- Bagian 1 -->
-          <div class="w-full px-4 mb-10 lg:w-1/2">
+          <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-up">
             <h4 class="font-bold uppercase text-pw2 text-lg mb-3 dark:text-pw5">
               About Me
             </h4>
@@ -202,7 +204,7 @@
             </p>
           </div>
           <!-- Bagian 2 -->
-          <div class="w-full px-4 lg:w-1/2">
+          <div class="w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
             <h3
               class="font-semibold text-pw7 text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-pw9"
             >
@@ -221,7 +223,7 @@
               <a
                 href="https://youtu.be/90wIMBrNIYg?si=Pn7M-OEe5Wip-iD0"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-pw3 text-pw3 hover:border-pw2 hover:bg-pw2 hover:text-pw9"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-pw3 text-pw3 hover:border-pw2 hover:bg-pw2 hover:text-pw9 hover:-translate-y-1 transition duration-300"
               >
                 <svg
                   role="img"
@@ -240,7 +242,7 @@
               <a
                 href="https://www.instagram.com/magungpratamatresna/"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-pw3 text-pw3 hover:border-pw2 hover:bg-pw2 hover:text-pw9"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-pw3 text-pw3 hover:border-pw2 hover:bg-pw2 hover:text-pw9 hover:-translate-y-1 transition duration-300"
               >
                 <svg
                   role="img"
@@ -259,7 +261,7 @@
               <a
                 href="https://www.linkedin.com/in/muhammad-agung-pratama-tresna-s-t-5b37b321a/"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-pw3 text-pw3 hover:border-pw2 hover:bg-pw2 hover:text-pw9"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-pw3 text-pw3 hover:border-pw2 hover:bg-pw2 hover:text-pw9 hover:-translate-y-1 transition duration-300"
               >
                 <svg
                   role="img"
@@ -288,7 +290,7 @@
         <!-- pembungkus judul portfolio -->
         <div class="w-full px-4">
           <!-- portfolio pengantar -->
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down">
             <h4 class="font-semibold text-lg text-pw2 mb-2 dark:text-pw5">
               Project
             </h4>
@@ -308,9 +310,9 @@
           class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"
         >
           <!-- project 1 -->
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
-              <img src="dist/img/cnn.jpg" alt="Landing Page" width="w-full" />
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-md shadow-md overflow-hidden group">
+              <img src="dist/img/cnn.jpg" alt="Landing Page" class="w-full group-hover:scale-110 transition-transform duration-500 ease-in-out" />
             </div>
             <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
               Gender Classification Based On Voice Frequency Using Convolutional
@@ -326,12 +328,12 @@
             </p>
           </div>
           <!-- project 2 -->
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up" data-aos-delay="200">
+            <div class="rounded-md shadow-md overflow-hidden group">
               <img
                 src="dist/img/ppkormawa.jpg"
                 alt="E-commerce"
-                width="w-full"
+                class="w-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
               />
             </div>
             <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
@@ -348,12 +350,12 @@
             </p>
           </div>
           <!-- project 3 -->
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-md shadow-md overflow-hidden group">
               <img
                 src="dist/img/modul ajar.png"
                 alt="E-commerce"
-                width="w-full"
+                class="w-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
               />
             </div>
             <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
@@ -369,9 +371,9 @@
             </p>
           </div>
           <!-- project 4 -->
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
-              <img src="dist/img/absensi.png" alt="E-commerce" width="w-full" />
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up" data-aos-delay="200">
+            <div class="rounded-md shadow-md overflow-hidden group">
+              <img src="dist/img/absensi.png" alt="E-commerce" class="w-full group-hover:scale-110 transition-transform duration-500 ease-in-out" />
             </div>
             <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
               SMKN 1 Indra Makmu Digital Attendance System Description
@@ -385,12 +387,12 @@
             </p>
           </div>
           <!-- project 5 -->
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-md shadow-md overflow-hidden group">
               <img
                 src="dist/img/budgeting.png"
                 alt="E-commerce"
-                width="w-full"
+                class="w-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
               />
             </div>
             <h3 class="font-semibold text-xl text-pw7 mt-5 mb-3 dark:text-pw9">
@@ -423,7 +425,7 @@
         <!-- pembungkus judul pengantar client -->
         <div class="w-full px-4">
           <!-- Pengantar Client -->
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down">
             <h4 class="font-semibold text-lg text-pw5 mb-2">Experience</h4>
             <h2
               class="font-bold text-pw9 text-3xl mb-4 sm:text-4xl lg:text-5xl"
@@ -439,9 +441,9 @@
         <!-- pembungkus Work Experience -->
         <div class="flex flex-wrap md:justify-center">
           <!-- pembungkus elite educator -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="100">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -481,9 +483,9 @@
             </div>
           </div>
           <!-- pembungkus card UI/UX Design -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="200">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -522,9 +524,9 @@
             </div>
           </div>
           <!-- pembungkus card Admin Warehouse -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="300">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -565,9 +567,9 @@
           </div>
 
           <!-- pembungkus card Team IT Master Plan -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="100">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -606,9 +608,9 @@
             </div>
           </div>
           <!-- pembungkus card IT Support -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="200">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -646,9 +648,9 @@
             </div>
           </div>
           <!-- pembungkus card IT Support -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="200">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -687,9 +689,9 @@
             </div>
           </div>
           <!-- pembungkus card IT Support -->
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="200">
             <div
-              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+              class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
             >
               <div class="py-8 px-6">
                 <h3>
@@ -738,7 +740,7 @@
         <!-- pembungkus pengantar blog -->
         <div class="w-full px-4">
           <!-- pengantar blog -->
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down">
             <h4 class="font-semibold text-lg text-pw2 mb-2 dark:text-pw5">
               Organization
             </h4>
@@ -754,9 +756,9 @@
           </div>
           <div class="flex flex-wrap md:justify-center">
             <!-- pembungkus card Himatekkom -->
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="100">
               <div
-                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
               >
                 <div class="py-8 px-6">
                   <h3>
@@ -800,9 +802,9 @@
               </div>
             </div>
             <!-- pembungkus card SEULANGA -->
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-delay="200">
               <div
-                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2"
+                class="bg-pw9 rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-pw7 dark:shadow-pw2 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
               >
                 <div class="py-8 px-6">
                   <h3>
@@ -856,7 +858,7 @@
       <div class="container">
         <div class="w-full px-4">
           <!-- Pengantar Contact -->
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down">
             <h4 class="font-semibold text-lg text-pw2 mb-2 dark:text-pw5">
               Contact
             </h4>
@@ -866,13 +868,13 @@
               Contact Me
             </h2>
             <p class="font-medium text-pw1 md:text-lg dark:text-pw3">
-              current services do not support
+              Silakan kirimkan pesan Anda melalui form di bawah ini.
             </p>
           </div>
         </div>
-        <form>
+        <form id="contactForm">
           <!-- pembungkus list form -->
-          <div class="w-full lg:w-2/3 lg:mx-auto">
+          <div class="w-full lg:w-2/3 lg:mx-auto" data-aos="fade-up" data-aos-delay="100">
             <!-- Nama -->
             <div class="w-full px-4 mb-8">
               <label
@@ -883,6 +885,8 @@
               <input
                 type="text"
                 id="name"
+                name="name"
+                required
                 class="w-full bg-pw10 text-pw7 p-3 rounded-md focus:outline-none focus:ring-pw2 focus:ring-1 focus:border-pw2"
               />
             </div>
@@ -896,6 +900,8 @@
               <input
                 type="email"
                 id="email"
+                name="email"
+                required
                 class="w-full bg-pw10 text-pw7 p-3 rounded-md focus:outline-none focus:ring-pw2 focus:ring-1 focus:border-pw2"
               />
             </div>
@@ -907,13 +913,15 @@
                 >Pesan</label
               >
               <textarea
-                type="textarea"
                 id="pesan"
+                name="message"
+                required
                 class="w-full bg-pw10 text-pw7 p-3 rounded-md focus:outline-none focus:ring-pw2 focus:ring-1 focus:border-pw2 h-32"
               ></textarea>
             </div>
             <div class="w-full px-4">
               <button
+                type="submit"
                 class="text-base font-semibold text-pw9 bg-pw2 py-3 px-8 rounded-full w-full hover:bg-pw3 hover:text-pw7 transition duration-500 hover:shadow-lg dark:text-pw9 dark:hover:text-pw7"
               >
                 Kirim
@@ -921,6 +929,20 @@
             </div>
           </div>
         </form>
+        <script>
+          document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const pesan = document.getElementById('pesan').value;
+            
+            const phoneNumber = '6289516482992';
+            const text = `Halo Agung,\nSaya ${name} (${email}).\n\nPesan:\n${pesan}`;
+            const encodedText = encodeURIComponent(text);
+            
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, '_blank');
+          });
+        </script>
       </div>
     </section>
     <!-- contact Section End -->
@@ -1088,6 +1110,15 @@
       ><span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span
     ></a>
     <!-- Back to top End -->
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+      });
+    </script>
     <!-- js -->
     <script src="dist/js/script.js"></script>
   </body>
